@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "test05 (sample-tech)",
+    "slug": "test05-sample-tech",
+    "version": "1.0.0",
+    "icon": "https://estoreclub-public-dev.s3.ap-southeast-2.amazonaws.com/sample-tech/v1.0/media/app-icon.png",
+    "primaryColor": "#111216",
+    "scheme": "test05-sample-tech",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "club.estore.test05sampletech",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "club.estore.test05sampletech",
+      "adaptiveIcon": {
+        "foregroundImage": "https://estoreclub-public-dev.s3.ap-southeast-2.amazonaws.com/sample-tech/v1.0/media/app-icon-foreground.png",
+        "backgroundColor": "#0A63EE"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "https://estoreclub-public-dev.s3.ap-southeast-2.amazonaws.com/sample-tech/v1.0/media/app-splash-logo.png",
+          "imageWidth": 120,
+          "resizeMode": "contain",
+          "backgroundColor": "#e7ebf1"
+        }
+      ]
+    ],
+    "extra": {
+      "siteUrl": "https://test05-sample-tech.localhost:3000/"
+    }
+  }
+}
