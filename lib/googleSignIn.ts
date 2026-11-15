@@ -10,7 +10,7 @@ import * as WebBrowser from "expo-web-browser";
 import { Platform } from "react-native";
 
 /** What the platform's Google page posts back - see `PublicSiteInfo.googleSignInUrl`. */
-const CREDENTIAL_MESSAGE = "salespoint:google-credential";
+const CREDENTIAL_MESSAGE = "estoreclub:google-credential";
 
 interface PopupWindow {
   closed: boolean;
@@ -127,7 +127,7 @@ export function signInWithGooglePopup(params: {
 
   const popup = page.open(
     url.toString(),
-    "salespoint-google-sign-in",
+    "estoreclub-google-sign-in",
     "popup,width=460,height=560",
   );
 

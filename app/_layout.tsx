@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import { useEffect } from "react";
 
 import { BackButton } from "../components/BackButton";
+import { LaunchScreen } from "../components/LaunchScreen";
 import { HeaderActions } from "../components/CartButton";
 import { appHeader } from "../components/AppHeader";
 import { refreshCart } from "../lib/cartStore";
@@ -69,6 +70,8 @@ export default function RootLayout() {
           options={{ title: t("paid.title"), headerLeft: () => null }}
         />
       </Stack>
+      {/* Over everything until the shop is read - then it fades into the first screen. */}
+      <LaunchScreen />
     </>
   );
 }

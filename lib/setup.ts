@@ -17,13 +17,27 @@ const siteUrl = Constants.expoConfig?.extra?.siteUrl;
  * SDK its shop, so the shop comes from the environment. A platform build defines `process.env`
  * as empty: these are undefined there, and the build's own configuration stands.
  */
-const devApiUrl = process.env.EXPO_PUBLIC_API_URL;
+// The same name as the website's SERVER_URL (Expo passes only EXPO_PUBLIC_* into an app); the
+// older EXPO_PUBLIC_API_URL still works.
+const devApiUrl =
+  process.env.EXPO_PUBLIC_SERVER_URL ?? process.env.EXPO_PUBLIC_API_URL;
 const devAppKey = process.env.EXPO_PUBLIC_APP_KEY;
+
+/**
+ * A template's preview of the app (`build-templates.mjs`): the demo store's sample catalogue,
+ * read with no key at all. Nobody can pay for a basket there.
+ */
+const devProductSample = process.env.EXPO_PUBLIC_PRODUCT_SAMPLE;
 
 if (devApiUrl && devAppKey) {
   configureApp({
     apiUrl: devApiUrl,
     appKey: devAppKey,
+  });
+} else if (devApiUrl && devProductSample) {
+  configureApp({
+    apiUrl: devApiUrl,
+    productSample: devProductSample,
   });
 }
 
