@@ -1,0 +1,310 @@
+/**
+ * Every word the app says itself, in English - the built-in fallback for the shop's "App\Texts"
+ * list (`app_texts`). The support pages' words (delivery, returns, FAQ, about) and the home
+ * screen's are the website's own sentences, so the app and the site say the same thing.
+ *
+ * Flat keys, `{name}` placeholders filled by `t`. A word that counts something comes in
+ * plural forms, `<key>.one` / `.few` / `.many` / `.other`, picked by `Intl.PluralRules`
+ * from its `count`: English needs `one` and `other`, Russian `one`, `few` and `other`
+ * (its "many").
+ */
+export const en = {
+  "tabs.home": "Home",
+  "tabs.shop": "Shop",
+  "tabs.cart": "Bag",
+  "tabs.account": "Account",
+  "common.back": "Back",
+  "common.language": "Language",
+  "common.cancel": "Cancel",
+  "common.retry": "Try again",
+  "common.failedTitle": "That did not load",
+  "common.failedMessage": "Check your connection and try again.",
+  "common.toShop": "Back to the shop",
+  "common.email": "Email",
+  "hero.title1": "The future.",
+  "hero.title2": "In your hand.",
+  "hero.text": "Powerful. Beautiful. Designed for what's next.",
+  "hero.buy": "Buy now",
+  "hero.learn": "Learn more",
+  "hero.imageAlt": "A titanium smartphone, front and back",
+  "categories.label": "Shop by category",
+  "deals.title": "Deals",
+  "deals.text":
+    "Bundles that cost less together, and what is on offer right now.",
+  "arrivals.title": "New arrivals",
+  "arrivals.viewAll": "View all",
+  "home.emptyTitle": "The shop is on its way",
+  "home.emptyMessage": "There are no products to show just yet.",
+  "feature.1.title": "Free delivery",
+  "feature.1.text": "Free on orders over $200, across Auckland.",
+  "feature.2.title": "2-year warranty",
+  "feature.2.text": "Peace of mind with every purchase.",
+  "feature.3.title": "Trade-in program",
+  "feature.3.text": "Get credit for your old devices.",
+  "feature.4.title": "Secure payment",
+  "feature.4.text": "Your information is always protected.",
+  "shop.emptyTitle": "Nothing here yet",
+  "shop.emptyMessage": "This category has no products at the moment.",
+  "product.addToBag": "Add to bag",
+  "product.addNamed": "Add {name} to bag",
+  "product.view": "View {name}",
+  "product.added": "{name} added to your bag",
+  "product.notAdded": "Not added - try again",
+  "product.colour": "Colour",
+  "product.colourNamed": "Colour: {name}",
+  "product.soldOut": "Sold out",
+  "product.soldOutText":
+    "Sold out for now - check back soon, we restock often.",
+  "product.warranty": "{count}-month warranty",
+  "product.overview": "Overview",
+  "product.specs": "Tech specs",
+  "product.related": "You may also like",
+  "product.notFoundTitle": "Product not found",
+  "product.notFoundMessage": "It may no longer be in the shop.",
+  "gallery.photo": "Photo {n} of {count}",
+  "quantity.decrease": "Fewer",
+  "quantity.increase": "More",
+  "spec.yes": "Yes",
+  "spec.general": "General",
+  "spec.BRAND": "Brand",
+  "badges.new": "New",
+  "badges.bestValue": "Best value",
+  "badges.bestSeller": "Best seller",
+  "badges.popular": "Popular",
+  "badges.save": "Save {amount}",
+  "badges.buyGetFree": "Buy {buy} get {get} free",
+  "badges.buyGet": "Buy {buy}, {get} for {price}",
+  "badges.bundle": "{count} for {price}",
+  "badges.liked": "Liked by {likes}, disliked by {dislikes}",
+  "bundle.badge": "Bundle",
+  "bundle.from": "From {price}",
+  "bundle.choose": "Choose colours",
+  "bundle.chooseAll": "Pick every item first",
+  "bundle.notFoundTitle": "Bundle not found",
+  "bundle.notFoundMessage": "It may no longer be on offer.",
+  "bundle.inside": "What's in the bundle",
+  "bundle.allSpecs": "All specifications",
+  "bundle.openProduct": "Product details",
+  "feedback.title": "Reviews",
+  "feedback.show": "Reviews ({count})",
+  "feedback.leave": "Write a review",
+  "feedback.placeholder": "What do you think of it?",
+  "feedback.replyPlaceholder": "Add a reply",
+  "feedback.post": "Post",
+  "feedback.reply": "Reply",
+  "feedback.signInToComment": "Sign in to write a review",
+  "feedback.signInToVote": "Sign in to rate this product",
+  "feedback.delete": "Delete",
+  "feedback.deleteConfirm": "Delete this review?",
+  "feedback.hideReplies": "Hide replies",
+  "feedback.moreReplies": "Show more replies",
+  "feedback.more": "More reviews",
+  "feedback.anonymous": "Customer",
+  "feedback.fromShop": "Store",
+  "feedback.like": "Like",
+  "feedback.dislike": "Dislike",
+  "feedback.noRatings": "No ratings yet",
+  "feedback.rateIt": "Rate this product",
+  "cart.title": "Your bag",
+  "cart.emptyTitle": "Your bag is empty",
+  "cart.emptyMessage": "Pick something you love and it will show up here.",
+  "cart.browse": "Continue shopping",
+  "cart.remove": "Remove",
+  "cart.subtotal": "Subtotal",
+  "cart.discount": "Discount",
+  "cart.taxIncluded": "Includes {rate}% {name}",
+  "cart.total": "Total",
+  "cart.checkout": "Checkout",
+  "cart.deliveryNote":
+    "Delivery is priced at checkout from your address - free over $200.",
+  "cart.signInToOrder": "Sign in to order",
+  "cart.paidAlready": "Finished paying?",
+  "cart.startNew": "Start a new order",
+  "cart.noSiteUrl":
+    "This app does not know the shop's website yet, so it cannot open the payment page.",
+  "paid.title": "Thank you",
+  "paid.message":
+    "Your order is in, and a confirmation is on its way to your inbox.",
+  "paid.orders": "Track my order",
+  "account.intro": "We will email you a six-digit code - no password needed.",
+  "account.welcomeTitle": "Welcome to {name}",
+  "account.welcome": "Welcome",
+  "account.welcomeSubtitle":
+    "Sign in to follow your orders until they reach you.",
+  "account.codeTitle": "Check your email",
+  "account.continueWithGoogle": "Continue with Google",
+  "account.googleBlocked":
+    "The Google window was blocked. Allow pop-ups and try again.",
+  "account.or": "or",
+  "account.emailPlaceholder": "you@example.com",
+  "account.sendCode": "Email me a code",
+  "account.code": "Six-digit code",
+  "account.codeSentTo": "We sent a code to {email}.",
+  "account.verify": "Sign in",
+  "account.otherEmail": "Use another email",
+  "account.unavailableTitle": "Sign-in is not available",
+  "account.unavailableMessage":
+    "You can shop without an account - everything you need is in the catalogue.",
+  "account.greeting": "Hello, {name}",
+  "account.greetingAnonymous": "Hello",
+  "account.noOrdersTitle": "No orders yet",
+  "account.noOrdersMessage":
+    "What you order will be listed here, with where it has got to.",
+  "account.activeOrders": "Active orders",
+  "account.pastOrders": "Past orders",
+  "account.addresses": "Delivery addresses",
+  "account.addressesText":
+    "Where we deliver your orders - the ones you used and any you add.",
+  "account.noAddresses":
+    "No addresses yet - add one, or it is saved with your first delivery.",
+  "account.removeAddress": "Remove this address?",
+  "account.cards": "Saved cards",
+  "account.cardsText": "Cards you saved when paying here.",
+  "account.cardExpires": "Expires {date}",
+  "account.cardInUse": "In use - it can be removed once the payment is settled",
+  "account.removeCard": "Remove this card?",
+  "account.remove": "Remove",
+  "account.help": "Help & information",
+  "account.signOut": "Sign out",
+  "account.signOutConfirm": "Sign out of {email}?",
+  "account.order": "Order {number}",
+  "account.status.open": "In progress",
+  "account.status.completed": "Completed",
+  "account.status.cancelled": "Cancelled",
+  "order.title": "Your order",
+  "order.progress": "Order progress",
+  "order.received": "Received",
+  "order.delivered": "Delivered",
+  "order.deliverBy": "At your door by {time}",
+  "order.deliveryAddress": "Delivery address",
+  "order.items": "In this order",
+  "order.refunded": "Refunded {amount}",
+  "order.signInTitle": "Sign in to see this order",
+  "order.signInMessage": "Your orders are kept with your account.",
+  "order.delivery.pending": "Being packed",
+  "order.delivery.ready": "Ready to ship",
+  "order.delivery.picked_up": "On its way",
+  "order.delivery.delivered": "Delivered",
+  "order.delivery.failed": "Delivery did not go through",
+  "order.delivery.cancelled": "Delivery cancelled",
+  "info.delivery": "Delivery & returns",
+  "info.faq": "FAQ",
+  "info.about": "About us",
+  "delivery.title": "Delivery & returns",
+  "delivery.intro":
+    "Where we deliver, what it costs and how long it takes - and how to send something back.",
+  "delivery.fact.zone": "Where we deliver",
+  "delivery.fact.fee": "Delivery fee",
+  "delivery.fact.free": "Free delivery",
+  "delivery.fact.eta": "Arrives in",
+  "delivery.zone": "Auckland",
+  "delivery.fee": "$9.90",
+  "delivery.freeAbove": "On orders over $200",
+  "delivery.eta": "1-2 working days",
+  "delivery.s1.title": "Where we deliver",
+  "delivery.s1.body":
+    "Anywhere within 30 km of central Auckland. Type your address at checkout and we tell you straight away whether we reach it and what delivery costs.",
+  "delivery.s2.title": "When it arrives",
+  "delivery.s2.body":
+    "Orders paid before 2 pm on a working day leave the warehouse the same day and arrive within one to two working days. We email you a tracking link as soon as yours is on its way.",
+  "delivery.s3.title": "What it costs",
+  "delivery.s3.body":
+    "Delivery is $9.90, and free on every order over $200. The fee is worked out at checkout from your address, before you pay.",
+  "delivery.s4.title": "If you are not home",
+  "delivery.s4.body":
+    "Every parcel needs a signature - it is a device worth keeping safe. If nobody is in, the courier leaves a card and tries again the next working day.",
+  "returns.title": "Returns & warranty",
+  "returns.intro":
+    "Changed your mind, or something is not right? Here is how it works.",
+  "returns.s1.title": "30-day returns",
+  "returns.s1.body":
+    "Send anything back within 30 days of delivery, unused and in its original box, for a full refund. Return shipping is on us - email us and we send a prepaid label.",
+  "returns.s2.title": "Refunds",
+  "returns.s2.body":
+    "We refund to the card you paid with within five working days of the parcel reaching us.",
+  "returns.s3.title": "Warranty",
+  "returns.s3.body":
+    "Every device carries the maker's warranty, and we extend it to two years. A device that develops a fault is repaired or replaced, at no cost to you.",
+  "returns.s4.title": "Faulty on arrival",
+  "returns.s4.body":
+    "Tell us within 7 days and we send a replacement before you return the faulty one.",
+  "faq.title": "Frequently asked questions",
+  "faq.intro":
+    "The questions we are asked most often. Something else? We are happy to help.",
+  "faq.q1": "What warranty do I get?",
+  "faq.a1":
+    "Two years on every device: the maker's warranty, extended by us. If it develops a fault, we repair or replace it at no cost. Accessories carry 12 months.",
+  "faq.q2": "How long does delivery take?",
+  "faq.a2":
+    "One to two working days across Auckland. Orders paid before 2 pm on a working day leave the same day, and you get a tracking link by email.",
+  "faq.q3": "How much is delivery?",
+  "faq.a3":
+    "$9.90, and free on orders over $200. Checkout works it out from your address before you pay.",
+  "faq.q4": "Can I return something?",
+  "faq.a4":
+    "Yes - within 30 days of delivery, unused and in its original box, for a full refund. Return shipping is on us.",
+  "faq.q5": "How can I pay?",
+  "faq.a5":
+    "By card - Visa, Mastercard and American Express - or Apple Pay and Google Pay, on our secure payment page. We never see your card details.",
+  "faq.q6": 'What does "Sold out" mean?',
+  "faq.a6":
+    "We have none left of that product, or of that colour, right now. We restock often - check back in a few days, or pick another colour.",
+  "faq.q7": "Do you take trade-ins?",
+  "faq.a7":
+    "Yes. Tell us what you have and its condition, and we quote a credit you can put towards your next device.",
+  "faq.q8": "Where is my order?",
+  "faq.a8":
+    "Use the tracking link we emailed you, enter your order number on the Track order page, or sign in to see every order in your account.",
+  "faq.more": "Still have a question?",
+  "faq.contact": "Email us",
+  "about.hero.title": "Better technology.",
+  "about.hero.titleAccent": "Delivered.",
+  "about.hero.text":
+    "We pick the phones, tablets, consoles and audio worth owning - and bring them to your door, with a warranty that lasts.",
+  "about.story.title": "A shop for people who love good tech.",
+  "about.story.text1":
+    "{brand} started with a simple idea: buying a new device should be as good as using it. No queues, no pushy sales, no small print - just the right product at a fair price.",
+  "about.story.text2":
+    "We are online only, so what we save on shopfronts goes into fast delivery, a longer warranty and people who answer when you ask.",
+  "about.values.title": "Four promises, on every order.",
+  "about.value.1.title": "Genuine products",
+  "about.value.1.text":
+    "New, sealed and sourced from authorised distributors. Never grey imports.",
+  "about.value.2.title": "Two-year warranty",
+  "about.value.2.text":
+    "We extend every maker's warranty to two years, and handle the claim for you.",
+  "about.value.3.title": "Fast delivery",
+  "about.value.3.text":
+    "Across Auckland in one to two working days, free on orders over $200.",
+  "about.value.4.title": "Real support",
+  "about.value.4.text":
+    "Questions before you buy, help after - by email, from people who know the products.",
+  "about.cta.title": "Ready to upgrade?",
+  "about.cta.text":
+    "The latest phones, tablets, consoles and audio - in one place.",
+  "about.cta.button": "Shop now",
+  "faq.contactUrl": "mailto:hello@techstore.example",
+  "badges.rated.one": "Rated {average} by {count} customer",
+  "badges.rated.other": "Rated {average} by {count} customers",
+  "feedback.count.one": "{count} review",
+  "feedback.count.other": "{count} reviews",
+  "feedback.replies.one": "{count} reply",
+  "feedback.replies.other": "{count} replies",
+  "feedback.stars.one": "{count} star",
+  "feedback.stars.other": "{count} stars",
+  "feedback.ratings.one": "{count} rating",
+  "feedback.ratings.other": "{count} ratings",
+  "account.items.one": "{count} item",
+  "account.items.other": "{count} items",
+} as const;
+
+/** The forms a counted word may come in. */
+type PluralForm = "zero" | "one" | "two" | "few" | "many" | "other";
+
+/** A key as callers name it: a counted word without its plural form. */
+type BaseKey<K extends string> = K extends `${infer B}.${PluralForm}` ? B : K;
+
+export type TextKey = BaseKey<keyof typeof en>;
+
+/** One language's words, by key - plural forms by their own keys. */
+export type Words = Readonly<Record<string, string>>;

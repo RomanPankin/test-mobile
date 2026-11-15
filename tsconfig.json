@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    // Expo's base settings (`expo/tsconfig.base`), written out: this folder is built by the
+    // platform's worker, not installed here, so that file is not there to extend - and without
+    // these the editor reads JSX as an error.
+    "jsx": "react-native",
+    "target": "esnext",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "lib": ["esnext", "dom"],
+    "allowJs": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "resolveJsonModule": true
+  }
+}
